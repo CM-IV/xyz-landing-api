@@ -12,9 +12,6 @@ export default class LinksController {
 
     public async store({ request, response }) {
         const todoSchema = schema.create({
-            section_subtitle: schema.string({ trim: true }, [
-                rules.required()
-            ]),
             link: schema.boolean([
                 rules.required()
             ]),
@@ -26,7 +23,6 @@ export default class LinksController {
         const payload = await request.validate({ schema: todoSchema });
 
         await Link.create({
-            section_subtitle: payload.section_subtitle,
             link: payload.link,
             text: payload.text
         });
@@ -42,9 +38,6 @@ export default class LinksController {
         const linkEl = await Link.findOrFail(params.id);
 
         const linkSchema = schema.create({
-            section_subtitle: schema.string({ trim: true }, [
-                rules.required()
-            ]),
             link: schema.string({}, [
                 rules.required()
             ]),
@@ -55,7 +48,6 @@ export default class LinksController {
 
         const payload = await request.validate({ schema: linkSchema });
 
-        linkEl.section_subtitle = payload.section_subtitle,
         linkEl.link = payload.link,
         linkEl.text = payload.text
 

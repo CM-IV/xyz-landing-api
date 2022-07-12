@@ -6,9 +6,6 @@ export default class Link extends BaseModel {
   public id: number
 
   @column()
-  public section_subtitle: string
-
-  @column()
   public link: string
 
   @column()

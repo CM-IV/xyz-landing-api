@@ -15,7 +15,6 @@ export const TodoFactory = Factory
 export const LinkFactory = Factory
   .define(Link, ({ faker }) => {
     return {
-      section_subtitle: faker.lorem.words(3),
       link: faker.lorem.sentence(),
       text: faker.lorem.words(2)
     }

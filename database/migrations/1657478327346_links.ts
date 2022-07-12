@@ -6,8 +6,7 @@ export default class extends BaseSchema {
   public async up () {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.string('section_subtitle', 80)
-      table.string('link', 100)
+      table.string('link', 120)
       table.string('text', 80)
 
       /**
