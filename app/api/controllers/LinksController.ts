@@ -12,7 +12,7 @@ export default class LinksController {
 
     public async store({ request, response }) {
         const todoSchema = schema.create({
-            link: schema.boolean([
+            link: schema.string({}, [
                 rules.required()
             ]),
             text: schema.string({}, [
