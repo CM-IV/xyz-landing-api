@@ -1,0 +1,21 @@
+[32mbackend:build[0m: cache hit, replaying output [2m29995b3293d1d59a[0m
+[32mbackend:build: [0m
+[32mbackend:build: [0m> backend@1.0.0 build /home/charlie/Documents/code_prod/js/adonis-projects/ots-turborepo/app/backend
+[32mbackend:build: [0m> node ace build --production
+[32mbackend:build: [0m
+[32mbackend:build: [0m[ info ]  cleaning up "./build" directory
+[32mbackend:build: [0m[ info ]  compiling typescript source files
+[32mbackend:build: [0m[ info ]  copy { ace,package.json,package-lock.json => build }
+[32mbackend:build: [0m[ info ]  copy { .adonisrc.json => build }
+[32mbackend:build: [0m[32mCREATE:[39m ace-manifest.json file
+[32mbackend:build: [0m[ success ]  built successfully
+[32mbackend:build: [0m
+[32mbackend:build: [0m╭────────────────────────────────────────────────────────────────────────╮
+[32mbackend:build: [0m│    Run the following commands to start the server in production        │
+[32mbackend:build: [0m│────────────────────────────────────────────────────────────────────────│
+[32mbackend:build: [0m│                                                                        │
+[32mbackend:build: [0m│    ❯ cd build                                                          │
+[32mbackend:build: [0m│    ❯ npm ci --production                                               │
+[32mbackend:build: [0m│    ❯ node server.js                                                    │
+[32mbackend:build: [0m│                                                                        │
+[32mbackend:build: [0m╰────────────────────────────────────────────────────────────────────────╯
