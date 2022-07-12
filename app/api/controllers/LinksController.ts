@@ -3,8 +3,11 @@ import { schema, rules } from "@ioc:Adonis/Core/Validator";
 import Link from '../models/Link';
 
 export default class LinksController {
-    public async index() {
-        return Link.all();
+    public async index({ request }: HttpContextContract) {
+        const page = request.input("page", 1);
+        const limit = request.input("per_page", 6);
+
+        return Link.query().paginate(page, limit);
     }
 
     public async store({ request, response }) {
