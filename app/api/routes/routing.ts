@@ -38,7 +38,10 @@ Route.group(() => {
     return response.status(200);
   });
 
-  Route.resource("todos", "TodosController").apiOnly();
-  Route.resource("links", "LinksController").apiOnly();
+  Route.get("/links/all", "LinksController.getAll");
+  Route.get("/todos/all", "TodosController.getAll");
+
+  Route.resource("/todos", "TodosController").apiOnly();
+  Route.resource("/links", "LinksController").apiOnly();
   
 }).prefix("/api");

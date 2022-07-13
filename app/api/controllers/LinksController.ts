@@ -3,6 +3,10 @@ import { schema, rules } from "@ioc:Adonis/Core/Validator";
 import Link from '../models/Link';
 
 export default class LinksController {
+    public async getAll() {
+        return Link.all();
+    }
+
     public async index({ request }: HttpContextContract) {
         const page = request.input("page", 1);
         const limit = request.input("per_page", 6);
