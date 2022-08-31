@@ -1,0 +1,7 @@
+{
+    "version": 2,
+    "name": "xyz-api",
+    "builds": [
+       { "src": "server.js", "use": "@vercel/node" }
+    ]
+ }
